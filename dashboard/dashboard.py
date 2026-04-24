@@ -25,4 +25,14 @@ fig, ax = plt.subplots(figsize=(10, 5))
 sns.boxplot(x='weathersit', y='cnt', data=df, ax=ax)
 st.pyplot(fig)
 
+# 6. Membuat Visualisasi 3: Tren Bulanan (Contoh Tambahan)
+st.subheader('Tren Penyewaan Sepeda per Bulan')
+fig, ax = plt.subplots(figsize=(12, 6))
+# Sesuaikan 'mnth' atau 'month' dengan nama kolom di main_data.csv kamu
+sns.lineplot(data=df, x='mnth', y='cnt', marker='o', ax=ax)
+ax.set_xlabel('Bulan')
+ax.set_ylabel('Jumlah Penyewa')
+st.pyplot(fig)
+
+
 st.caption('Copyright (c) Vina 2026')
